@@ -1,0 +1,185 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 19, 23, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: var(--spacing-base);
+}
+
+.modal {
+  background: var(--color-canvas);
+  border-radius: var(--rounded-xxl);
+  padding: var(--spacing-xxl);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xxl);
+  box-shadow: var(--shadow-panel);
+  animation: slideUp 200ms ease-out;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Header ── */
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--spacing-base);
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--color-ink-deep);
+  font-feature-settings: 'ss01', 'ss02';
+}
+
+.subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-slate);
+  margin-top: var(--spacing-xxs);
+  line-height: 1.43;
+}
+
+.totalAmount {
+  font-weight: 700;
+  color: var(--color-ink-deep);
+}
+
+.closeBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--rounded-full);
+  background: var(--color-surface-soft);
+  border: none;
+  cursor: pointer;
+  color: var(--color-charcoal);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 150ms ease-out;
+  touch-action: manipulation;
+}
+
+.closeBtn:active {
+  background: var(--color-hairline-soft);
+}
+
+/* ── Payment methods (radio-option pattern) ── */
+.methods {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.methodOption {
+  width: 100%;
+  padding: var(--spacing-lg);
+  border-radius: var(--rounded-lg);
+  background: var(--color-canvas);
+  border: 1px solid var(--color-hairline-soft);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-base);
+  text-align: left;
+  transition: border-color 150ms ease-out, background 150ms ease-out;
+  touch-action: manipulation;
+}
+
+.methodOption:active {
+  background: var(--color-surface-soft);
+}
+
+/* radio-option-selected: deep cobalt border */
+.methodOptionSelected {
+  border: 2px solid var(--color-primary-deep);
+  background: var(--color-primary-soft);
+}
+
+.methodEmoji {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.methodLabel {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-ink-deep);
+  line-height: 1.5;
+}
+
+.methodCheck {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-primary-deep);
+}
+
+/* ── Actions ── */
+.actions {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+/* button-secondary (ghost outline) */
+.cancelBtn {
+  flex: 1;
+  padding: 12px 28px;
+  border-radius: var(--rounded-full);
+  background: transparent;
+  color: var(--color-ink-deep);
+  border: 2px solid var(--color-ink-deep);
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.43;
+  letter-spacing: -0.14px;
+  cursor: pointer;
+  transition: background 150ms ease-out;
+  touch-action: manipulation;
+}
+
+.cancelBtn:active {
+  background: var(--color-surface-soft);
+}
+
+/* button-buy-cta (cobalt) */
+.confirmBtn {
+  flex: 1;
+  padding: 14px 30px;
+  border-radius: var(--rounded-full);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  border: none;
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.43;
+  letter-spacing: -0.14px;
+  cursor: pointer;
+  transition: background 150ms ease-out;
+  touch-action: manipulation;
+}
+
+.confirmBtn:active {
+  background: var(--color-primary-deep);
+}
+
+.confirmBtn:disabled {
+  background: var(--color-surface-soft);
+  color: var(--color-stone);
+  cursor: not-allowed;
+}

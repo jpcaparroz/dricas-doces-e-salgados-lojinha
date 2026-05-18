@@ -1,0 +1,211 @@
+.sidebar {
+  width: 320px;
+  background: var(--color-canvas);
+  border-left: 1px solid var(--color-hairline-soft);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  box-shadow: var(--shadow-panel);
+}
+
+/* ── Header ── */
+.header {
+  padding: var(--spacing-xl) var(--spacing-xxl);
+  border-bottom: 1px solid var(--color-hairline-soft);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.44;
+  color: var(--color-ink-deep);
+  font-feature-settings: 'ss01', 'ss02';
+}
+
+.badge {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 3px 8px;
+  border-radius: var(--rounded-full);
+  min-width: 22px;
+  text-align: center;
+}
+
+/* ── Item list ── */
+.itemList {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--spacing-lg) var(--spacing-xxl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-base);
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xxxl) 0;
+}
+
+.emptyIcon {
+  font-size: 32px;
+  opacity: 0.4;
+}
+
+.emptyText {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-stone);
+  line-height: 1.43;
+}
+
+/* ── Item row ── */
+.item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) 0;
+  border-bottom: 1px solid var(--color-hairline-soft);
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.itemInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.itemName {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-ink-deep);
+  line-height: 1.43;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.itemSubtotal {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-slate);
+  line-height: 1.33;
+  margin-top: 2px;
+}
+
+.itemCounter {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  flex-shrink: 0;
+}
+
+.itemBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--rounded-full);
+  background: var(--color-surface-soft);
+  color: var(--color-ink-deep);
+  font-size: 16px;
+  font-weight: 700;
+  border: 1px solid var(--color-hairline-soft);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 150ms ease-out;
+  touch-action: manipulation;
+}
+
+.itemBtn:active {
+  background: var(--color-hairline-soft);
+}
+
+.itemBtnPrimary {
+  background: var(--color-primary-soft);
+  color: var(--color-primary-deep);
+  border-color: transparent;
+}
+
+.itemBtnPrimary:active {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.itemQty {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-ink-deep);
+  min-width: 20px;
+  text-align: center;
+}
+
+/* ── Footer ── */
+.footer {
+  padding: var(--spacing-xl) var(--spacing-xxl);
+  border-top: 1px solid var(--color-hairline-soft);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.totalRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.totalLabel {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-charcoal);
+  line-height: 1.5;
+}
+
+.totalValue {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-ink-deep);
+  font-feature-settings: 'ss01', 'ss02';
+}
+
+/* ── Checkout button (buy CTA — cobalt) ── */
+.checkoutBtn {
+  width: 100%;
+  padding: 14px 30px;
+  border-radius: var(--rounded-full);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.43;
+  letter-spacing: -0.14px;
+  border: none;
+  cursor: pointer;
+  transition: background 150ms ease-out;
+  touch-action: manipulation;
+}
+
+.checkoutBtn:active {
+  background: var(--color-primary-deep);
+}
+
+.checkoutBtn:disabled {
+  background: var(--color-surface-soft);
+  color: var(--color-stone);
+  cursor: not-allowed;
+}

@@ -1,0 +1,116 @@
+.card {
+  background: var(--color-canvas);
+  border-radius: var(--rounded-xl);
+  border: 1px solid var(--color-hairline-soft);
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  user-select: none;
+  transition: border-color 150ms ease-out;
+}
+
+.card:hover {
+  border-color: var(--color-hairline);
+}
+
+.body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.category {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-slate);
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--color-ink-deep);
+  font-feature-settings: 'ss01', 'ss02';
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.44;
+  color: var(--color-ink-deep);
+  margin-top: var(--spacing-xxs);
+}
+
+/* ── Add button (buy CTA — cobalt) ── */
+.addBtn {
+  width: 100%;
+  padding: 14px 30px;
+  border-radius: var(--rounded-full);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.43;
+  letter-spacing: -0.14px;
+  border: none;
+  cursor: pointer;
+  transition: background 150ms ease-out;
+  touch-action: manipulation;
+}
+
+.addBtn:active {
+  background: var(--color-primary-deep);
+}
+
+/* ── Quantity counter ── */
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-xs);
+}
+
+.counterBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--rounded-full);
+  background: var(--color-surface-soft);
+  color: var(--color-ink-deep);
+  font-size: 18px;
+  font-weight: 700;
+  border: 1px solid var(--color-hairline-soft);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 150ms ease-out;
+  touch-action: manipulation;
+}
+
+.counterBtn:active {
+  background: var(--color-hairline-soft);
+}
+
+.counterBtnPrimary {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  border-color: var(--color-primary);
+}
+
+.counterBtnPrimary:active {
+  background: var(--color-primary-deep);
+}
+
+.counterQty {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-ink-deep);
+  min-width: 24px;
+  text-align: center;
+}

@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  postgres_db:
+    image: postgres:15-alpine
+    container_name: dricas_doces_e_salgados_lojinha_db
+    restart: always
+    environment:
+      POSTGRES_USER: lojinha_user
+      POSTGRES_PASSWORD: lojinha_password
+      POSTGRES_DB: dricas_doces_e_salgados_lojinha_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

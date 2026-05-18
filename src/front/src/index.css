@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+:root {
+  /* ── Colors: Brand & Accent ── */
+  --color-primary: #0866FF;
+  --color-primary-deep: #0143b5;
+  --color-primary-soft: rgba(8, 102, 255, 0.15);
+  --color-fb-blue: #1877F2;
+  --color-oculus-purple: #7B4FFF;
+
+  /* ── Colors: Surface ── */
+  --color-canvas: #FFFFFF;
+  --color-surface-soft: #F5F5F7;
+  --color-hairline: rgba(10, 19, 23, 0.18);
+  --color-hairline-soft: rgba(10, 19, 23, 0.12);
+
+  /* ── Colors: Text ── */
+  --color-ink-deep: #0A1317;
+  --color-ink: #1C2B33;
+  --color-charcoal: #3D4F5A;
+  --color-slate: #5C7080;
+  --color-steel: #8A9BA8;
+  --color-stone: #B3BEC6;
+
+  /* ── Colors: Buttons ── */
+  --color-ink-button: #0A1317;
+  --color-on-ink-button: #FFFFFF;
+  --color-on-primary: #FFFFFF;
+  --color-button-secondary: transparent;
+  --color-disabled-text: #B3BEC6;
+
+  /* ── Colors: Semantic ── */
+  --color-success: #1A8C4E;
+  --color-attention: #E07B00;
+  --color-warning: #FFD600;
+  --color-critical: #D93025;
+  --color-critical-strong: #B31C12;
+
+  /* ── Border Radius ── */
+  --rounded-xs: 2px;
+  --rounded-sm: 4px;
+  --rounded-md: 6px;
+  --rounded-lg: 8px;
+  --rounded-xl: 16px;
+  --rounded-xxl: 24px;
+  --rounded-xxxl: 32px;
+  --rounded-feature: 40px;
+  --rounded-full: 100px;
+
+  /* ── Spacing ── */
+  --spacing-xxs: 4px;
+  --spacing-xs: 8px;
+  --spacing-sm: 10px;
+  --spacing-md: 12px;
+  --spacing-base: 16px;
+  --spacing-lg: 20px;
+  --spacing-xl: 24px;
+  --spacing-xxl: 32px;
+  --spacing-xxxl: 40px;
+  --spacing-section-sm: 48px;
+  --spacing-section: 64px;
+
+  /* ── Typography ── */
+  --font-family: 'Montserrat', Helvetica, Arial, 'Noto Sans', sans-serif;
+
+  /* ── Elevation ── */
+  --shadow-panel: rgba(20, 22, 26, 0.3) 0px 1px 4px 0px;
+  --shadow-pill: rgba(0, 0, 0, 0.2) 1px 1px 0px 0px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, #root {
+  height: 100%;
+  font-family: var(--font-family);
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
